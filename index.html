@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Endereço - Aero Glass</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+    
+    <div class="window-container">
+        <div class="window-header">
+            <div class="title-bar-text">
+                <img src="https://img.icons8.com/color/16/000000/search-property.png" alt="icon">
+                <span>Explorador de Endereços</span>
+            </div>
+            <div class="window-controls">
+                <button class="win-btn minimize">&#8211;</button>
+                <button class="win-btn maximize">&#9634;</button>
+                <button class="win-btn close">&#10005;</button>
+            </div>
+        </div>
+        
+        <div class="window-body">
+            <div class="search-section">
+                <input type="text" id="cep" placeholder="Digite o CEP (ex: 01001000)" maxlength="8">
+                <button onclick="buscarEndereco()" class="btn-search">Pesquisar</button>
+            </div>
+
+            <div id="resultado" class="content-panel">
+                <div class="data-row"><strong>Logradouro:</strong> <span id="rua">---</span></div>
+                <div class="data-row"><strong>Bairro:</strong> <span id="bairro">---</span></div>
+                <div class="data-row"><strong>Cidade:</strong> <span id="cidade">---</span></div>
+                <div class="data-row"><strong>Estado:</strong> <span id="uf">---</span></div>
+                <div class="data-row"><strong>CEP:</strong> <span id="cep_final">---</span></div>
+            </div>
+            
+            <div class="status-bar">
+                <span>Pronto</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
